@@ -1,0 +1,67 @@
+<div class="profile-container">
+  <img src="assets/images/profil3.png" alt="Photo de profil" class="profile-picture">
+  <div class="profile-info">
+    <span class="profile-name">AMINA TEMRI</span>
+  </div>
+</div>
+
+<div class="settings-page">
+  <div class="settings-container-left">
+    <h2>Paramètres</h2>
+
+    <div class="setting-item">
+      <span class="setting-text">Mode sombre</span>
+      <button class="toggle-button" (click)="toggleDarkMode()">
+        <i [class]="isDarkModeEnabled ? 'fas fa-sun' : 'fas fa-moon'"></i>
+
+      </button>
+    </div>
+
+    <div class="setting-item">
+      <span class="setting-text">Notifications</span>
+      <button class="toggle-button notifications-toggle">
+        <i class="fas fa-bell"></i>
+      </button>
+    </div>
+
+    <div class="setting-item">
+      <span class="setting-text">Gestion du compte</span>
+      <button class="toggle-button account-management-toggle">
+        <i class="fas fa-user-cog"></i>
+      </button>
+    </div>
+
+    <div class="setting-item">
+      <span class="setting-text">Confidentialité</span>
+      <button class="toggle-button privacy-toggle">
+        <i class="fas fa-shield-alt"></i>
+      </button>
+    </div>
+
+    <div class="setting-item">
+      <span class="setting-text">Support</span>
+      <button class="toggle-button support-toggle">
+        <i class="fas fa-question-circle"></i>
+      </button>
+    </div>
+
+    <div class="setting-item">
+      <span class="setting-text">Se déconnecter</span>
+      <button class="toggle-button logout-toggle" (click)="logout()">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="settings-container-right">
+    <div class="additional-options">
+      <img src="assets/images/gall1.png" alt="Additional option image" class="additional-option-image">
+      <div class="additional-info">
+        <p>Télécharger Common Pro pour Windows</p>
+        <p>Passer des appels, partager votre écran, passer une expérience plus rapide en téléchargeant l'application Windows.</p>
+        <button class="download-button">Télécharger sur le Microsoft Store</button>
+        <p><i class="fas fa-lock secure-icon"></i>Vos messages personnels sont chiffrés de bout en bout.</p>
+      </div>
+    </div>
+  </div>
+</div>

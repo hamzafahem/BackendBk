@@ -1,0 +1,79 @@
+/* Style pour la page entière */
+.verification-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Remplir la hauteur de la vue */
+    background: linear-gradient(145deg, #c0d9f8, #9cc2e5);
+  }
+  
+  /* Style pour le conteneur du formulaire */
+  .verification-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Largeur maximale du conteneur */
+    background-color: #ffffff; /* Couleur de fond du conteneur */
+    padding: 20px;
+    border-radius: 8px; /* Coins arrondis pour le conteneur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère autour du conteneur */
+    text-align: center;
+  }
+  
+  /* Style pour le bouton de retour */
+  .back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2ecc71; /* Couleur de la flèche verte */
+  }
+  
+  /* Style pour l'image de vérification */
+  .verification-icon {
+    display: block;
+    margin: 20px auto; /* Marge au-dessus et en dessous de l'image */
+    width: 100px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+  }
+  
+  /* Style pour les titres et paragraphes */
+  h2, p {
+    margin: 20px 0;
+    color: #333; /* Couleur du texte */
+  }
+  
+  /* Style pour les champs de saisie du code */
+  .code-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  input[type="text"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style pour le bouton de continuation */
+  .continue-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6ca8b6; /* Couleur de fond du bouton vert */
+    color: #ffffff; /* Couleur du texte du bouton */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .continue-button:hover {
+    background-color: #27ae60; /* Couleur de fond au survol (vert foncé) */
+  }
+  

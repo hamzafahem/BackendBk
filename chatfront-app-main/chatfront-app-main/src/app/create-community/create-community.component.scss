@@ -1,0 +1,79 @@
+/* Conteneur principal pour la création de communauté */
+.create-community-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #c0d9f8, #9cc2e5);
+    border-radius: 12px; /* Bords arrondis */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Ombre accentuée */
+    border: 1px solid #e0e0e0; /* Bordure légère */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Effets de transition */
+  }
+  
+  .create-community-container:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25); /* Ombre plus marquée au survol */
+    transform: scale(1.02); /* Agrandissement léger au survol */
+  }
+  
+  .create-community-container h1 {
+    font-size: 36px; /* Taille de police plus grande */
+    margin-bottom: 25px;
+    color: #3498db; /* Couleur bleue vive */
+    font-family: 'Roboto', sans-serif; /* Police moderne */
+    text-align: center; /* Centrage du titre */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Espacement entre les groupes de formulaire */
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600; /* Poids de police plus fort */
+    margin-bottom: 8px;
+    color: #333; /* Couleur du texte plus sombre pour la lisibilité */
+    font-size: 16px; /* Taille de police ajustée */
+  }
+  
+  .form-group .form-control {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px; /* Bords arrondis */
+    border: 1px solid #ddd; /* Bordure douce */
+    box-sizing: border-box;
+    font-size: 16px; /* Taille de police confortable */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Effets de transition */
+  }
+  
+  .form-group .form-control:focus {
+    border-color: #3498db; /* Bordure bleue au focus */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Ombre bleue légère au focus */
+    outline: none; /* Retirer le contour par défaut */
+  }
+  
+  .form-group textarea.form-control {
+    resize: vertical;
+  }
+  
+  .btn-primary {
+    background-color: #3498db; /* Couleur bleue vive */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px; /* Taille de police plus grande */
+    border-radius: 8px; /* Bords arrondis pour le bouton */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Effets de transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9; /* Couleur bleue plus foncée au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+  }
+  
+  .btn-primary:focus {
+    outline: none; /* Retirer le contour au focus */
+  }
+  

@@ -1,0 +1,135 @@
+.calls-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f5f7fa;
+}
+
+.calls-header {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    font-size: 16px;
+    border: 1px solid #d0d7e0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #6c757d;
+}
+
+.recent-calls-header {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.call-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.call-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.call-item:hover {
+    background-color: #bbdefb;
+    transform: scale(1.02);
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.call-time {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.call-type i {
+    font-size: 20px;
+}
+
+.outgoing-call {
+    color: green;
+}
+
+.incoming-call {
+    color: blue;
+}
+
+.missed-call {
+    background-color: #ffebee;
+}
+
+.missed-call .contact-name {
+    color: red;
+}
+
+.missed-call-indicator {
+    font-size: 18px;
+    color: red;
+}
+
+.missed-call-icon {
+    color: red;
+    font-size: 18px;
+}
+.call-type i {
+    font-size: 20px;
+}
+
+.incoming-call-icon {
+    color: blue; /* Couleur pour les appels entrants */
+}
+
+.outgoing-call-icon {
+    color: green; /* Couleur pour les appels sortants */
+}

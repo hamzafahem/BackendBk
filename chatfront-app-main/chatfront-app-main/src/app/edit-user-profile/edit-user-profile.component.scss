@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(145deg, #c0d9f8, #9cc2e5);
+}
+
+header {
+    background-color: #ffffff; /* Couleur de fond du header */
+    padding: 20px;
+    display: flex;
+    align-items: center;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour le header */
+}
+
+h1 {
+    margin-left: 10px;
+    color: #333; /* Couleur sombre pour le titre */
+}
+
+.container {
+    max-width: 500px; /* Réduire la largeur maximale du conteneur */
+    margin: 30px auto; /* Réduire l'espace au-dessus et en dessous */
+    padding: 15px; /* Réduire l'espacement intérieur */
+    background-color: #ffffff; /* Fond blanc pour le conteneur */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.profile-picture {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.change-picture-button {
+    margin-top: 10px; /* Espacement entre le bouton et l'image */
+    display: block; /* S'assurer que le bouton soit un bloc pour centrer */
+    margin-left: auto; /* Centrer le bouton horizontalement */
+    margin-right: auto; /* Centrer le bouton horizontalement */
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 80px; /* Réduire la taille de la photo de profil */
+    height: 80px;
+    object-fit: cover;
+    border: 1.5px solid #333; /* Réduire la bordure autour de la photo */
+}
+
+.profile-info {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-info li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Réduire l'espacement intérieur des éléments de la liste */
+    background-color: #f9f9f9; /* Fond gris clair pour les informations */
+    margin: 4px 0; /* Réduire l'espace entre les éléments de la liste */
+    border-radius: 8px; /* Arrondir les coins */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+.profile-heading h1 {
+    font-size: 18px; /* Réduire la taille de la police du titre */
+    margin-bottom: 15px; /* Espacement en dessous du titre */
+    text-align: center; /* Centrer le titre */
+    color: #333; /* Couleur du texte */
+}
+.profile-info li span {
+    color: #333; /* Couleur du texte */
+}
+
+footer {
+    background-color: #ffffff; /* Couleur de fond du footer */
+    padding: 15px; /* Réduire l'espacement intérieur du footer */
+    display: flex;
+    justify-content: space-around;
+    position: fixed; /* Fixer le footer en bas de la page */
+    width: 100%; /* S'assurer que le footer prend toute la largeur */
+    bottom: 0; /* Positionner le footer en bas */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour le footer */
+}
+
+footer i {
+    font-size: 20px; /* Réduire la taille des icônes */
+    color: #555; /* Couleur sombre pour les icônes */
+    cursor: pointer; /* Curseur pour les icônes */
+    transition: color 0.3s; /* Transition pour la couleur */
+}
+
+footer i:hover {
+    color: #333; /* Changer la couleur au survol */
+}
+
+.profile-heading {
+    text-align: center; /* Center the heading text */
+    margin: 20px 0; /* Optional: add spacing above and below */
+}
+
+.profile-heading h1 {
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Set the heading color */
+}

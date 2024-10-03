@@ -1,0 +1,51 @@
+<div class="home-container">
+  <!-- Sidebar de navigation -->
+  <div class="sidebar">
+    <ul>
+      
+      <li (click)="setActiveSection('chat')">
+        <i class="fas fa-comments"></i> <!-- Icône de chat -->
+      </li>
+      <li (click)="setActiveSection('calls')">
+        <i class="fas fa-phone"></i> <!-- Icône d'appel -->
+      </li>
+      <li (click)="setActiveSection('calendar')">
+        <i class="fas fa-calendar-alt"></i> <!-- Icône de calendrier -->
+      </li>
+      <li (click)="setActiveSection('community')">
+        <i class="fas fa-users"></i> <!-- Icône de communauté -->
+      </li>
+      <li (click)="setActiveSection('settings')">
+        <i class="fas fa-cog"></i> <!-- Icône de paramètres -->
+      </li>
+    </ul>
+  </div>
+
+  <!-- Contenu principal -->
+  <div class="main-content">
+    <!-- Section des Chats -->
+    <div class="section" [ngClass]="{'active': activeSection === 'chat'}">
+      <app-chat></app-chat>
+    </div>
+
+    <!-- Section des Appels -->
+    <div class="section" [ngClass]="{'active': activeSection === 'calls'}">
+      <app-calls></app-calls>
+    </div>
+
+    <!-- Section Calendrier -->
+    <div class="section" [ngClass]="{'active': activeSection === 'calendar'}">
+      <app-calendar></app-calendar>
+    </div>
+    
+    <!-- Section Communauté -->
+    <div class="section" [ngClass]="{'active': activeSection === 'community'}">
+      <app-community></app-community>
+    </div>
+
+    <!-- Section Paramètres -->
+    <div class="section" [ngClass]="{'active': activeSection === 'settings'}">
+      <app-settings></app-settings>
+    </div>
+  </div>
+</div>

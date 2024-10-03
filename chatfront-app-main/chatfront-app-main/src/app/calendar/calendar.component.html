@@ -1,0 +1,27 @@
+<div class="calendar-container">
+    <div class="calendar-header">
+      <div class="month-year">August 2024</div>
+      <button class="today-button">Today</button>
+    </div>
+    <div class="calendar-grid">
+      <div class="day-header" *ngFor="let day of daysOfWeek">{{ day }}</div>
+      <div
+        class="day-cell"
+        *ngFor="let date of dates; let i = index"
+        [class.current-day]="isToday(date)"
+        (click)="addEvent(date)"
+      >
+        <div class="day-number">{{ date.getDate() }}</div>
+        <div class="events">
+          <div
+            *ngFor="let event of getEventsForDate(date)"
+            class="event-item"
+            (click)="removeEvent(date, event, $event)"
+          >
+            {{ event }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

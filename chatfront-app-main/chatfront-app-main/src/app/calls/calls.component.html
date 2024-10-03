@@ -1,0 +1,36 @@
+<div class="calls-container">
+  <h2 class="calls-header">Calls</h2>
+
+  <!-- Barre de recherche -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search..." class="search-input" id="searchInput" [(ngModel)]="searchValue">
+    <i class="fas fa-search search-icon" (click)="searchCalls()"></i>
+  </div>
+
+  <!-- Zone de texte "Appels récents" -->
+  <div class="recent-calls-header">
+    <span>Appels récents</span>
+  </div>
+
+  <!-- Liste des appels -->
+  <div class="call-list" id="callList">
+    <div class="call-item" *ngFor="let call of filteredCalls" [ngClass]="{'missed-call': call.type === 'missed'}">
+      <div class="contact-info">
+        <img [src]="call.photo" alt="Contact Photo" class="contact-photo">
+        <div class="contact-details">
+          <span class="contact-name">{{ call.name }}</span>
+          <span class="call-time">{{ call.time }} - {{ getCallTypeText(call.type) }}</span>
+        </div>
+      </div>
+      <!-- Icônes d'appel -->
+      <div class="call-type">
+        <i *ngIf="call.type === 'incoming'" class="fas fa-phone incoming-call-icon"></i>
+        <i *ngIf="call.type === 'outgoing'" class="fas fa-phone-alt outgoing-call-icon"></i>
+      </div>
+      <!-- Indicateur d'appel manqué -->
+      <div *ngIf="call.type === 'missed'" class="missed-call-indicator">
+        <i class="fas fa-exclamation-circle missed-call-icon"></i>
+      </div>
+    </div>
+  </div>
+</div>

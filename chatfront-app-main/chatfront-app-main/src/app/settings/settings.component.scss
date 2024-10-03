@@ -1,0 +1,216 @@
+/* Styles globaux pour le corps de la page */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9ecef; /* Couleur de fond claire pour l'ensemble de la page */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Conteneur du profil */
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f4f4f9; /* Couleur de fond claire */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styles pour la photo de profil */
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Styles pour les informations du profil */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles pour le nom du profil */
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Conteneur principal de la page des paramètres */
+.settings-page {
+  display: flex;
+  width: 100%; /* Prendre toute la largeur disponible */
+  max-width: 1600px; /* Largeur maximale pour une présentation élégante */
+  margin: 0 auto; /* Centrer horizontalement avec une marge automatique */
+  min-height: 100vh; /* Assurer que le conteneur occupe toute la hauteur de la page */
+  padding: 20px; /* Ajouter du padding interne */
+  box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Conteneur gauche et droit des paramètres */
+.settings-container-left, .settings-container-right {
+  width: 50%; /* Diviser en deux sections égales */
+  padding: 20px; /* Ajouter du padding interne */
+  background-color: #f4f4f9; /* Couleur de fond claire */
+  color: #333; /* Couleur du texte */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Titre */
+h2 {
+  font-size: 24px;
+  color: #007bff; /* Couleur bleue */
+  margin-bottom: 20px;
+}
+
+/* Élément de paramètre */
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px; /* Augmenter le padding pour plus d'espace */
+  border-bottom: 1px solid #ddd; /* Bordure subtile pour chaque élément */
+  transition: border-bottom 0.3s ease;
+}
+
+/* Texte du paramètre */
+.setting-text {
+  font-size: 16px;
+}
+
+/* Bouton de bascule */
+.toggle-button, .action-button {
+  background: none;
+  border: none;
+  color: #007bff; /* Couleur bleue pour les boutons */
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Icônes des boutons */
+.toggle-button i, .action-button i {
+  font-size: 20px; /* Taille des icônes légèrement réduite pour élégance */
+}
+
+/* Couleurs spécifiques pour chaque type d'option */
+.notifications-toggle i {
+  color: #ff5722; /* Couleur spécifique pour les notifications */
+}
+
+.account-management-toggle i {
+  color: #4caf50; /* Couleur spécifique pour la gestion du compte */
+}
+
+.privacy-toggle i {
+  color: #2196f3; /* Couleur spécifique pour la confidentialité */
+}
+
+.support-toggle i {
+  color: #9c27b0; /* Couleur spécifique pour le support */
+}
+
+.logout-toggle i {
+  color: #f44336; /* Couleur spécifique pour la déconnexion */
+}
+
+/* Mode sombre */
+body.dark-mode {
+  background-color: #121212; /* Couleur de fond sombre */
+  color: #e0e0e0; /* Couleur du texte clair */
+}
+
+body.dark-mode .profile-container,
+body.dark-mode .settings-page,
+body.dark-mode .settings-container-left,
+body.dark-mode .settings-container-right,
+body.dark-mode .chat-container {
+  background-color: #1e1e1e; /* Couleur de fond sombre pour divers conteneurs */
+  color: #ffffff; /* Couleur du texte clair */
+}
+
+body.dark-mode .setting-item {
+  border-bottom: 1px solid #333; /* Bordure subtile pour les éléments en mode sombre */
+}
+
+body.dark-mode .toggle-button, 
+body.dark-mode .action-button {
+  color: #007bff; /* Couleur des icônes des boutons */
+  background-color: #303030; /* Fond des boutons en mode sombre */
+}
+
+body.dark-mode .notifications-toggle i {
+  color: #ff5722; /* Couleur spécifique pour les notifications */
+}
+
+body.dark-mode .account-management-toggle i {
+  color: #4caf50; /* Couleur spécifique pour la gestion du compte */
+}
+
+body.dark-mode .privacy-toggle i {
+  color: #2196f3; /* Couleur spécifique pour la confidentialité */
+}
+
+body.dark-mode .support-toggle i {
+  color: #9c27b0; /* Couleur spécifique pour le support */
+}
+
+body.dark-mode .logout-toggle i {
+  color: #f44336; /* Couleur spécifique pour la déconnexion */
+}
+
+/* Styles pour les options supplémentaires */
+.additional-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.additional-option-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px; /* Coins légèrement arrondis pour une présentation sophistiquée */
+  margin-bottom: 20px;
+}
+
+.additional-info {
+  font-size: 16px;
+  color: #333;
+}
+
+.download-button {
+  background-color: #007bff; /* Couleur bleue pour le bouton */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 0;
+  text-transform: uppercase; /* Texte en majuscule */
+}
+
+.download-button:hover {
+  background-color: #0056b3; /* Couleur plus foncée au survol */
+}
+
+.secure-icon {
+  font-size: 20px; /* Taille de l'icône */
+  color: #007bff; /* Couleur de l'icône */
+  margin-right: 8px; /* Marge à droite de l'icône */
+}

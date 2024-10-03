@@ -1,0 +1,19 @@
+<div class="community-container">
+  <div class="community-header">
+    <h2>Communautés</h2>
+    <button class="create-group-button" [routerLink]="['/create-community']">
+      <i class="fas fa-users"></i> Créer une communauté
+    </button>
+  </div>
+
+  <div class="community-grid">
+    <div *ngFor="let community of communities" class="community-card">
+      <img [src]="community.image" alt="{{ community.name }}" class="community-image">
+      <div class="community-info">
+        <span class="community-name">{{ community.name }}</span>
+        <p class="community-description">{{ community.description }}</p>
+        <button class="join-button" (click)="joinCommunity(community)">Rejoindre</button>
+      </div>
+    </div>
+  </div>
+</div>

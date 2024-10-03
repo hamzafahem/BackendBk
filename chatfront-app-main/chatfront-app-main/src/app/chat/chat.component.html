@@ -1,0 +1,126 @@
+<div class="chat-container">
+  <div class="chat-list">
+    <!-- Nom de la conversation et icône -->
+    <div class="chat-title">
+      <i class="fas fa-comments chat-title-icon"></i>
+      <span>Conversations</span>
+    </div>
+    <!-- Barre de recherche -->
+    <div class="search-bar">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Rechercher une conversation..." />
+      <i class="fas fa-search search-icon"></i>
+    </div>
+    <!-- Section Groupes -->
+    <div class="section-title">
+      <span>Groupes</span>
+    </div>
+    <!-- Articles de groupe -->
+    <div class="section-item" *ngFor="let group of groups">
+      <i class="fas fa-users section-icon"></i>
+      <span>{{ group.name }}</span>
+    </div>
+    <!-- Titre Membres -->
+    <div class="members-title">
+      <span>Membres</span>
+    </div>
+    <!-- Liste des conversations -->
+    <div class="chat-item" *ngFor="let chat of filteredChats()" (click)="selectChat(chat)">
+      <div class="chat-avatar">
+        <img [src]="chat.avatarUrl" alt="Avatar">
+        <div class="status-indicator"></div> <!-- Ajout du statut -->
+      </div>
+      <div class="chat-details">
+        <h3>{{ chat.name }}</h3>
+        <p>{{ chat.lastMessage }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-window" *ngIf="selectedChat">
+    <div class="chat-header">
+      <div class="chat-header-info" (click)="showUserProfile(selectedChat, $event)">
+        <img [src]="selectedChat.avatarUrl" alt="Avatar">
+        <h2>{{ selectedChat.name }}</h2>
+      </div>
+      <div class="chat-header-actions">
+        <i class="fas fa-phone" (click)="makeCall()"></i>
+        <i class="fas fa-video" (click)="makeVideoCall()"></i>
+        <i class="fas fa-ellipsis-v" (click)="openMenu()"></i>
+      </div>
+    </div>
+
+    <div class="chat-messages">
+      <div class="message" *ngFor="let message of selectedChat.messages">
+        <div class="message-content" [ngClass]="{'message-sent': message.sent, 'message-received': !message.sent}">
+          {{ message.text }}
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" [(ngModel)]="newMessage" placeholder="Tapez un message..." (keydown.enter)="sendMessage()">
+      <div class="chat-input-icons">
+        <i class="fas fa-smile" (click)="openEmojiPicker()"></i>
+        <i class="fas fa-paperclip" (click)="attachFile()"></i>
+        <i class="fas fa-image" (click)="attachImage()"></i>
+        <i class="fas fa-microphone" (click)="sendAudio()"></i>
+        <i class="fas fa-paper-plane" (click)="sendMessage()"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fenêtre contextuelle de profil utilisateur -->
+  <div class="user-profile-popup" *ngIf="showProfilePopup">
+    <div class="user-profile-content">
+      <!-- Bouton Modifier -->
+      <button class="edit-button" (click)="editProfile()">Modifier</button>
+
+      <!-- Icône de fermeture -->
+      <i class="fas fa-times close-icon" (click)="hideUserProfile()"></i>
+
+      <img [src]="currentUserProfile?.avatarUrl" alt="Avatar" class="profile-avatar">
+      <h2>{{ currentUserProfile?.name }}</h2>
+      <div class="user-profile-sections">
+        <!-- Notifications -->
+        <div class="profile-section">
+          <h3>Notifications</h3>
+          <div class="notification-toggle">
+            <span class="notification-text">Vous avez 3 nouvelles notifications</span>
+            <i class="fas fa-bell notification-icon" [ngClass]="{'fa-bell': notificationsEnabled, 'fa-bell-slash': !notificationsEnabled}" (click)="toggleNotifications()"></i>
+          </div>
+        </div>
+        <!-- À propos -->
+        <div class="profile-section">
+          <h3>À propos</h3>
+          <p>{{ currentUserProfile?.about }}</p>
+        </div>
+        <!-- Médias -->
+        <div class="profile-section">
+          <h3>Médias</h3>
+          <div class="media-gallery">
+            <img *ngFor="let media of mediaList" [src]="media.url" alt="Media">
+          </div>
+          
+        </div>
+        <!-- Fichiers -->
+        <div class="profile-section">
+          <h3>Fichiers</h3>
+          <ul>
+            <li *ngFor="let file of currentUserProfile?.files">
+              <a [href]="file.url">{{ file.name }}</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Liens -->
+        <div class="profile-section">
+          <h3>Liens</h3>
+          <ul>
+            <li *ngFor="let link of currentUserProfile?.links">
+              <a [href]="link.url">{{ link.name }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+.home-container {
+  display: flex;
+  height: 100vh;
+
+  .sidebar {
+    width: 150px; /* Largeur réduite de la sidebar */
+    background-color: #7ab1ec;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Réduit le padding global */
+    overflow-y: auto;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 10px; /* Augmente le padding des items */
+        cursor: pointer;
+        border-radius: 8px;
+        margin-bottom: 8px; /* Augmente l'espace entre les items */
+        transition: background-color 0.3s;
+        color: white;
+
+        i {
+          margin-right: 16px; /* Augmente l'espace entre l'icône et le texte */
+          font-size: 1.3em; /* Augmente légèrement la taille des icônes si nécessaire */
+        }
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    flex: 1;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+    padding: 20px; /* Ajuste le padding si nécessaire */
+    display: flex;
+    flex-direction: column;
+
+    .section {
+      display: none; /* Section inactive est cachée */
+    }
+
+    .section.active {
+      display: block; /* Section active est visible */
+    }
+  }
+}
